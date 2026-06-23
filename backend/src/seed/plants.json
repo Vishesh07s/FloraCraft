@@ -1,0 +1,597 @@
+[
+  {
+    "name": "Money Plant",
+    "price": 499,
+    "categories": [
+      "Home Decor",
+      "Succulent"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?pothos,devil%27s-ivy,houseplant",
+    "rating": 4.8
+  },
+  {
+    "name": "Snake Plant",
+    "price": 149,
+    "categories": [
+      "Pet Friendly",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?snake-plant,sansevieria,houseplant",
+    "rating": 4.1
+  },
+  {
+    "name": "Spider Plant",
+    "price": 599,
+    "categories": [
+      "Herb"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?spider-plant,chlorophytum,houseplant",
+    "rating": 4.6
+  },
+  {
+    "name": "Peace Lily",
+    "price": 499,
+    "categories": [
+      "Succulent",
+      "Hanging",
+      "Air Purifying"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?peace-lily,spathiphyllum,houseplant,white-flower",
+    "rating": 3.8
+  },
+  {
+    "name": "Areca Palm",
+    "price": 549,
+    "categories": [
+      "Herb"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?areca-palm,dypsis,houseplant",
+    "rating": 4.9
+  },
+  {
+    "name": "Boston Fern",
+    "price": 299,
+    "categories": [
+      "Herb",
+      "Outdoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?boston-fern,nephrolepis,fern",
+    "rating": 4.9
+  },
+  {
+    "name": "Aloe Vera",
+    "price": 449,
+    "categories": [
+      "Flowering",
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?aloe-vera,aloe,succulent",
+    "rating": 4.6
+  },
+  {
+    "name": "Jade Plant",
+    "price": 149,
+    "categories": [
+      "Indoor",
+      "Herb",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?jade-plant,crassula,succulent",
+    "rating": 3.6
+  },
+  {
+    "name": "ZZ Plant",
+    "price": 449,
+    "categories": [
+      "Hanging"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?zz-plant,zamioculcas,houseplant",
+    "rating": 3.8
+  },
+  {
+    "name": "Rubber Plant",
+    "price": 599,
+    "categories": [
+      "Air Purifying",
+      "Flowering"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?rubber-plant,ficus-elastica,houseplant",
+    "rating": 4.8
+  },
+  {
+    "name": "Fiddle Leaf Fig",
+    "price": 249,
+    "categories": [
+      "Pet Friendly"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?fiddle-leaf-fig,ficus-lyrata,houseplant",
+    "rating": 4.4
+  },
+  {
+    "name": "Pothos Golden",
+    "price": 549,
+    "categories": [
+      "Herb",
+      "Outdoor"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?golden-pothos,epipremnum-aureum,houseplant",
+    "rating": 3.9
+  },
+  {
+    "name": "Chinese Evergreen",
+    "price": 199,
+    "categories": [
+      "Succulent",
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?chinese-evergreen,aglaonema,houseplant",
+    "rating": 4.0
+  },
+  {
+    "name": "English Ivy",
+    "price": 699,
+    "categories": [
+      "Home Decor",
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?english-ivy,hedera-helix,ivy",
+    "rating": 4.8
+  },
+  {
+    "name": "Lavender",
+    "price": 449,
+    "categories": [
+      "Succulent",
+      "Pet Friendly"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?lavender,lavandula,flower",
+    "rating": 4.6
+  },
+  {
+    "name": "Basil",
+    "price": 699,
+    "categories": [
+      "Flowering"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?basil,ocimum,herb",
+    "rating": 4.8
+  },
+  {
+    "name": "Rosemary",
+    "price": 599,
+    "categories": [
+      "Low Maintenance",
+      "Air Purifying"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?rosemary,rosmarinus,herb",
+    "rating": 3.9
+  },
+  {
+    "name": "Mint",
+    "price": 599,
+    "categories": [
+      "Herb"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?mint,mentha,herb",
+    "rating": 3.6
+  },
+  {
+    "name": "Thyme",
+    "price": 199,
+    "categories": [
+      "Air Purifying",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?thyme,thymus,herb",
+    "rating": 4.1
+  },
+  {
+    "name": "Chrysanthemum",
+    "price": 199,
+    "categories": [
+      "Home Decor",
+      "Outdoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?chrysanthemum,flower",
+    "rating": 3.6
+  },
+  {
+    "name": "Bougainvillea",
+    "price": 549,
+    "categories": [
+      "Low Maintenance",
+      "Flowering",
+      "Air Purifying"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?bougainvillea,flower",
+    "rating": 4.2
+  },
+  {
+    "name": "Hibiscus",
+    "price": 299,
+    "categories": [
+      "Herb"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?hibiscus,flower",
+    "rating": 4.9
+  },
+  {
+    "name": "Jasmine",
+    "price": 549,
+    "categories": [
+      "Succulent",
+      "Home Decor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?jasmine,flower",
+    "rating": 4.6
+  },
+  {
+    "name": "Marigold",
+    "price": 349,
+    "categories": [
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?marigold,tagetes,flower",
+    "rating": 4.0
+  },
+  {
+    "name": "Geranium",
+    "price": 249,
+    "categories": [
+      "Hanging"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?geranium,pelargonium,flower",
+    "rating": 3.6
+  },
+  {
+    "name": "Cactus Bunny Ear",
+    "price": 149,
+    "categories": [
+      "Air Purifying",
+      "Herb",
+      "Home Decor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?bunny-ear-cactus,opuntia,succulent",
+    "rating": 5.0
+  },
+  {
+    "name": "Echeveria",
+    "price": 399,
+    "categories": [
+      "Succulent",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?echeveria,rosette,succulent",
+    "rating": 3.8
+  },
+  {
+    "name": "Haworthia",
+    "price": 199,
+    "categories": [
+      "Outdoor",
+      "Hanging"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?haworthia,succulent",
+    "rating": 4.2
+  },
+  {
+    "name": "Sedum Burrito",
+    "price": 799,
+    "categories": [
+      "Hanging",
+      "Succulent",
+      "Home Decor"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?burro%27s-tail,sedum,morganianum,succulent",
+    "rating": 4.1
+  },
+  {
+    "name": "Kalanchoe",
+    "price": 149,
+    "categories": [
+      "Pet Friendly",
+      "Succulent"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?kalanchoe,flower,succulent",
+    "rating": 4.7
+  },
+  {
+    "name": "Dracaena",
+    "price": 199,
+    "categories": [
+      "Air Purifying",
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?dracaena,houseplant",
+    "rating": 3.8
+  },
+  {
+    "name": "Croton",
+    "price": 499,
+    "categories": [
+      "Outdoor",
+      "Succulent",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?croton,codiaeum,houseplant",
+    "rating": 4.3
+  },
+  {
+    "name": "Calathea",
+    "price": 699,
+    "categories": [
+      "Hanging"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?calathea,prayer-plant,houseplant",
+    "rating": 4.4
+  },
+  {
+    "name": "Dieffenbachia",
+    "price": 549,
+    "categories": [
+      "Hanging"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?dieffenbachia,dumb-cane,houseplant",
+    "rating": 3.7
+  },
+  {
+    "name": "Philodendron",
+    "price": 299,
+    "categories": [
+      "Outdoor",
+      "Hanging"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?philodendron,houseplant",
+    "rating": 4.2
+  },
+  {
+    "name": "Monstera Deliciosa",
+    "price": 499,
+    "categories": [
+      "Hanging"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?monstera-deliciosa,monstera,houseplant",
+    "rating": 4.1
+  },
+  {
+    "name": "Syngonium",
+    "price": 499,
+    "categories": [
+      "Flowering",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?syngonium,arrowhead,houseplant",
+    "rating": 3.7
+  },
+  {
+    "name": "Areca Bambino",
+    "price": 599,
+    "categories": [
+      "Hanging"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?areca-palm,bambino,houseplant",
+    "rating": 4.5
+  },
+  {
+    "name": "Rubber Variegata",
+    "price": 449,
+    "categories": [
+      "Outdoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?variegated-rubber-plant,ficus-elastica,houseplant",
+    "rating": 3.6
+  },
+  {
+    "name": "Aglaonema Red",
+    "price": 249,
+    "categories": [
+      "Outdoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?aglaonema,red-aglaonema,houseplant",
+    "rating": 4.1
+  },
+  {
+    "name": "Lucky Bamboo",
+    "price": 499,
+    "categories": [
+      "Indoor",
+      "Outdoor",
+      "Flowering"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?lucky-bamboo,dracaena-sanderiana",
+    "rating": 4.7
+  },
+  {
+    "name": "Bird of Paradise",
+    "price": 149,
+    "categories": [
+      "Low Maintenance",
+      "Succulent",
+      "Herb"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?bird-of-paradise,strelitzia,houseplant",
+    "rating": 4.8
+  },
+  {
+    "name": "Fern Asparagus",
+    "price": 199,
+    "categories": [
+      "Air Purifying",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?asparagus-fern,houseplant",
+    "rating": 3.9
+  },
+  {
+    "name": "Peperomia",
+    "price": 299,
+    "categories": [
+      "Outdoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?peperomia,houseplant",
+    "rating": 3.8
+  },
+  {
+    "name": "Schefflera",
+    "price": 699,
+    "categories": [
+      "Flowering"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?schefflera,umbrella-plant,houseplant",
+    "rating": 4.6
+  },
+  {
+    "name": "Ixora",
+    "price": 499,
+    "categories": [
+      "Flowering",
+      "Outdoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?ixora,flower",
+    "rating": 3.6
+  },
+  {
+    "name": "Coleus",
+    "price": 549,
+    "categories": [
+      "Indoor",
+      "Low Maintenance"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?coleus,painted-nettle,plant",
+    "rating": 4.9
+  },
+  {
+    "name": "Areca Golden",
+    "price": 149,
+    "categories": [
+      "Pet Friendly"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?golden-areca-palm,dypsis",
+    "rating": 3.7
+  },
+  {
+    "name": "Chlorophytum Lemon",
+    "price": 349,
+    "categories": [
+      "Flowering",
+      "Air Purifying",
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?chlorophytum,lemon,spider-plant",
+    "rating": 3.8
+  },
+  {
+    "name": "Money Plant #49",
+    "price": 149,
+    "categories": [
+      "Flowering",
+      "Herb"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?pothos,devil%27s-ivy,houseplant",
+    "rating": 4.8
+  },
+  {
+    "name": "Snake Plant #50",
+    "price": 349,
+    "categories": [
+      "Indoor"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?snake-plant,sansevieria,houseplant",
+    "rating": 4.2
+  },
+  {
+    "name": "Spider Plant #51",
+    "price": 449,
+    "categories": [
+      "Low Maintenance",
+      "Flowering"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?spider-plant,chlorophytum,houseplant",
+    "rating": 4.2
+  },
+  {
+    "name": "Peace Lily #52",
+    "price": 199,
+    "categories": [
+      "Home Decor",
+      "Low Maintenance"
+    ],
+    "available": false,
+    "image": "https://source.unsplash.com/featured/?peace-lily,spathiphyllum,houseplant,white-flower",
+    "rating": 4.5
+  },
+  {
+    "name": "Areca Palm #53",
+    "price": 599,
+    "categories": [
+      "Low Maintenance",
+      "Herb",
+      "Succulent"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?areca-palm,dypsis,houseplant",
+    "rating": 4.2
+  },
+  {
+    "name": "Boston Fern #54",
+    "price": 399,
+    "categories": [
+      "Succulent"
+    ],
+    "available": true,
+    "image": "https://source.unsplash.com/featured/?boston-fern,nephrolepis,fern",
+    "rating": 4.4
+  }
+]
