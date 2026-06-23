@@ -10,11 +10,12 @@ export async function connectDB(uri) {
   mongoose.set("strictQuery", true);
 
   try {
+    // Attempt database connection with a timeout
     await mongoose.connect(uri, {
       serverSelectionTimeoutMS: 10000,
-      dbName: "urvann_plants",
+      dbName: "floracraft_plants",
     });
-    console.log("✅ MongoDB connected");
+    console.log("✅ MongoDB connected successfully");
   } catch (err) {
     console.error("❌ MongoDB connection error:", err.message);
     process.exit(1);
