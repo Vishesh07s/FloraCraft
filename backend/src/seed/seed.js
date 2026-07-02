@@ -1,4 +1,6 @@
 import dotenv from "dotenv";
+import dns from "node:dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import { connectDB } from "../db.js";
 import { Plant } from "../models/Plant.js";
 import fs from "fs"; import path from "path"; import url from "url";
