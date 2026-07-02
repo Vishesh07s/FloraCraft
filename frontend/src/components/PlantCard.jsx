@@ -1,8 +1,8 @@
 import React from 'react'
 import { PLANT_IMAGE_MAP } from './imageMap.js'
 export default function PlantCard({ plant }){
-  const fallback = PLANT_IMAGE_MAP[plant.name] || 'https://source.unsplash.com/featured/?houseplant,green,foliage'
-  const src = plant.image || fallback
+  const fallback = PLANT_IMAGE_MAP[plant.name] || 'https://images.unsplash.com/photo-1597055181300-e3633a207518?auto=format&fit=crop&w=600&q=80'
+  const src = plant.image && !plant.image.includes('source.unsplash.com') ? plant.image : fallback
   return (
     <div className="card">
       <img src={src} alt={plant.name}/>
