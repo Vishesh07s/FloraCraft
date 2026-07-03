@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import Home from './pages/Home.jsx'
 import Store from './pages/Store.jsx'
 import Admin from './pages/Admin.jsx'
 export default function App(){
@@ -9,12 +10,14 @@ export default function App(){
         <header className="header">
           <div className="brand">🪴 FloraCraft</div>
           <nav className="row" style={{gap:'0.5rem'}}>
-            <NavLink to="/" end className={({isActive})=> isActive ? 'badge ok':'badge'}>Store</NavLink>
+            <NavLink to="/" end className={({isActive})=> isActive ? 'badge ok':'badge'}>Home</NavLink>
+            <NavLink to="/store" className={({isActive})=> isActive ? 'badge ok':'badge'}>Store</NavLink>
             <NavLink to="/admin" className={({isActive})=> isActive ? 'badge ok':'badge'}>Admin</NavLink>
           </nav>
         </header>
         <Routes>
-          <Route path="/" element={<Store/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/store" element={<Store/>}/>
           <Route path="/admin" element={<Admin/>}/>
         </Routes>
         <footer className="footer-container">
