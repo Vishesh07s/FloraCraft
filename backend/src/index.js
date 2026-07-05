@@ -36,8 +36,19 @@ if (process.env.NODE_ENV === "production") {
 
 const app = express();
 
-// Secure HTTP Headers
-app.use(helmet());
+// Secure HTTP Headers with custom CSP for Google OAuth 2.0
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        "script-src": ["'self'", "'unsafe-inline'", "https://accounts.google.com"],
+        "connect-src": ["'self'", "https://accounts.google.com", "https://*.googleapis.com"],
+        "frame-src": ["'self'", "https://accounts.google.com"],
+      },
+    },
+  })
+);
 
 // Secure CORS configuration
 const corsOrigin = process.env.NODE_ENV === "production" ? process.env.FRONTEND_URL : true;

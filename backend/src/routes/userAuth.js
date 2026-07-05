@@ -6,8 +6,10 @@ import { User } from "../models/User.js";
 import { userAuth } from "../middleware/userAuth.js";
 import { authRateLimiter } from "../middleware/rateLimiter.js";
 import { Plant } from "../models/Plant.js";
+import { OAuth2Client } from "google-auth-library";
 
 const router = Router();
+const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 // Centralized validation handler
 const handleValidationErrors = (req, res, next) => {
@@ -140,6 +142,11 @@ router.post(
         return res.status(401).json({ error: "Invalid username or password" });
       }
 
+      if (!user.password) {
+        console.warn(`⚠️ Failed login attempt: Password not set (Google user) - ${email}`);
+        return res.status(400).json({ error: "This account was registered using Google. Please Sign in with Google." });
+      }
+
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) {
         console.warn(`⚠️ Failed login attempt: Wrong password - ${email}`);
@@ -168,6 +175,87 @@ router.post(
       });
     } catch (e) {
       next(e);
+    }
+  }
+);
+
+// Google Sign-In / Register
+router.post(
+  "/google",
+  async (req, res, next) => {
+    try {
+      const { token } = req.body;
+      if (!token) {
+        return res.status(400).json({ error: "Google credential token is required" });
+      }
+
+      // Verify Google ID Token
+      const ticket = await googleClient.verifyIdToken({
+        idToken: token,
+        audience: process.env.GOOGLE_CLIENT_ID
+      });
+
+      const payload = ticket.getPayload();
+      const { sub: googleId, email, name, picture } = payload;
+
+      if (!email) {
+        return res.status(400).json({ error: "Email not provided by Google account" });
+      }
+
+      // Check if user already exists
+      let user = await User.findOne({ email });
+
+      if (!user) {
+        // Create new user since email does not exist
+        user = await User.create({
+          name: name || "Google User",
+          email,
+          googleId,
+          profileImage: picture || "",
+          phoneNumber: ""
+        });
+        console.log(`👤 New user registered via Google: ${email}`);
+      } else {
+        // Link googleId if user exists but has not linked Google before
+        let changed = false;
+        if (!user.googleId) {
+          user.googleId = googleId;
+          changed = true;
+        }
+        if (!user.profileImage && picture) {
+          user.profileImage = picture;
+          changed = true;
+        }
+        if (changed) {
+          await user.save();
+          console.log(`🔗 Existing user linked to Google account: ${email}`);
+        } else {
+          console.log(`🔑 User successfully logged in via Google: ${email}`);
+        }
+      }
+
+      // Generate local JWT token
+      const secret = process.env.JWT_SECRET || "floracraft_jwt_secret_token_key_development_only_123";
+      const appToken = jwt.sign(
+        { id: user._id, role: "user" },
+        secret,
+        { algorithm: "HS256", expiresIn: "2h" }
+      );
+
+      res.status(200).json({
+        token: appToken,
+        user: {
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          phoneNumber: user.phoneNumber || "",
+          profileImage: user.profileImage,
+          role: "user"
+        }
+      });
+    } catch (e) {
+      console.error("Google authentication error:", e);
+      return res.status(400).json({ error: "Google authentication failed. Please try again." });
     }
   }
 );

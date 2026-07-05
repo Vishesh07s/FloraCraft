@@ -23,7 +23,8 @@ const UserSchema = new mongoose.Schema({
     trim: true,
     index: true 
   },
-  password: { type: String, required: true },
+  password: { type: String },
+  googleId: { type: String, unique: true, sparse: true },
   phoneNumber: { type: String, default: "", trim: true },
   profileImage: { type: String, default: "" },
   addresses: { type: [AddressSchema], default: [] },
