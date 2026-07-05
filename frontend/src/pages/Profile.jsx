@@ -326,11 +326,11 @@ export default function Profile() {
                 </div>
                 <div className="form-group">
                   <label htmlFor="prof-phone">Phone Number</label>
-                  <input id="prof-phone" type="tel" value={profilePhone} onChange={(e) => setProfilePhone(e.target.value)} placeholder="Phone Number" />
+                  <input id="prof-phone" type="tel" value={profilePhone} onChange={(e) => setProfilePhone(e.target.value)} />
                 </div>
                 <div className="form-group">
                   <label htmlFor="prof-img">Profile Image URL</label>
-                  <input id="prof-img" type="text" value={profileImage} onChange={(e) => setProfileImage(e.target.value)} placeholder="https://..." />
+                  <input id="prof-img" type="text" value={profileImage} onChange={(e) => setProfileImage(e.target.value)} />
                 </div>
                 <button type="submit" disabled={busy} className="hero-btn btn-block" style={{ border: 'none', cursor: 'pointer', marginTop: '1.5rem' }}>
                   {busy ? 'Saving...' : 'Update Profile'}
@@ -344,15 +344,15 @@ export default function Profile() {
               <form onSubmit={handleChangePassword}>
                 <div className="form-group">
                   <label htmlFor="pass-old">Current Password</label>
-                  <input id="pass-old" type="password" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} required placeholder="••••••••" />
+                  <input id="pass-old" type="password" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} required />
                 </div>
                 <div className="form-group">
                   <label htmlFor="pass-new">New Password</label>
-                  <input id="pass-new" type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required placeholder="••••••••" />
+                  <input id="pass-new" type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required />
                 </div>
                 <div className="form-group">
                   <label htmlFor="pass-confirm">Confirm New Password</label>
-                  <input id="pass-confirm" type="password" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} required placeholder="••••••••" />
+                  <input id="pass-confirm" type="password" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} required />
                 </div>
                 <button type="submit" disabled={busy} className="hero-btn btn-block" style={{ border: 'none', cursor: 'pointer', marginTop: '1.5rem' }}>
                   {busy ? 'Updating...' : 'Change Password'}
@@ -419,7 +419,7 @@ export default function Profile() {
                 <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem' }}>
                   <div className="form-group" style={{ margin: 0 }}>
                     <label>Landmark</label>
-                    <input type="text" value={addrLandmark} onChange={(e) => setAddrLandmark(e.target.value)} placeholder="Near mall, park..." />
+                    <input type="text" value={addrLandmark} onChange={(e) => setAddrLandmark(e.target.value)} />
                   </div>
                   <div className="form-group" style={{ margin: 0 }}>
                     <label>City *</label>

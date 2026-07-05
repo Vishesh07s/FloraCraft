@@ -179,7 +179,6 @@ export default function Admin() {
               <input 
                 id="adm-user"
                 type="text" 
-                placeholder="admin" 
                 value={username} 
                 onChange={(e) => setUsername(e.target.value)} 
                 required 
@@ -190,7 +189,6 @@ export default function Admin() {
               <input 
                 id="adm-pass"
                 type="password" 
-                placeholder="••••••••" 
                 value={password} 
                 onChange={(e) => setPassword(e.target.value)} 
                 required 

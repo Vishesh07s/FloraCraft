@@ -88,7 +88,6 @@ export default function Login() {
               <input
                 id="auth-name"
                 type="text"
-                placeholder="John Doe"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -113,7 +112,6 @@ export default function Login() {
               <input
                 id="auth-phone"
                 type="tel"
-                placeholder="9876543210"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
@@ -125,7 +123,6 @@ export default function Login() {
             <input
               id="auth-password"
               type="password"
-              placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -138,7 +135,6 @@ export default function Login() {
               <input
                 id="auth-confirm-password"
                 type="password"
-                placeholder="••••••••"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required

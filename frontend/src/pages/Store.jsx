@@ -38,7 +38,7 @@ export default function Store() {
   return (
     <div style={{ animation: 'toastSlideIn 0.3s ease' }}>
       <div className="controls">
-        <SearchBar value={q} onChange={(v)=>{ setPage(1); setQ(v) }} placeholder="Search plants or categories..." />
+        <SearchBar value={q} onChange={(v)=>{ setPage(1); setQ(v) }} />
         <CategoryFilter categories={CATEGORIES} value={category} onChange={(v)=>{ setPage(1); setCategory(v) }} />
         <AvailabilityToggle value={inStock} onChange={(v)=>{ setPage(1); setInStock(v) }} />
         <SortBar value={sort} onChange={(v)=>{ setPage(1); setSort(v) }} />

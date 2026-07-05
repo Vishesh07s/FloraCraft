@@ -453,7 +453,6 @@ export default function Checkout() {
                     <label>Card Number *</label>
                     <input 
                       type="text" 
-                      placeholder="4111 2222 3333 4444" 
                       value={cardNumber} 
                       onChange={(e) => {
                         const v = e.target.value.replace(/\D/g, '').substring(0, 16);
@@ -468,7 +467,6 @@ export default function Checkout() {
                       <label>Expiry Date *</label>
                       <input 
                         type="text" 
-                        placeholder="MM/YY" 
                         value={cardExpiry}
                         onChange={(e) => {
                           const v = e.target.value.replace(/\D/g, '').substring(0, 4);
@@ -482,7 +480,6 @@ export default function Checkout() {
                       <input 
                         type="password" 
                         maxLength="3" 
-                        placeholder="123" 
                         value={cardCvv}
                         onChange={(e) => setCardCvv(e.target.value.replace(/\D/g, ''))}
                         required 

@@ -260,7 +260,6 @@ export default function ProductDetails() {
               <textarea
                 id="review-comment"
                 rows="4"
-                placeholder="What did you like or dislike about this plant? How did it arrive?"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 required
