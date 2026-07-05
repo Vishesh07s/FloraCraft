@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { loginUser, registerUser } from '../api.js';
+import { loginUser, registerUser, loginWithGoogle } from '../api.js';
 import { useApp } from '../context/AppContext.jsx';
 import { useToast } from '../context/ToastContext.jsx';
 
@@ -31,6 +31,56 @@ export default function Login() {
   }, [userToken, adminToken, navigate]);
 
   const from = location.state?.from?.pathname || '/store';
+
+  // Google Login response handler
+  const handleGoogleLoginResponse = async (response) => {
+    setBusy(true);
+    try {
+      const data = await loginWithGoogle(response.credential);
+      setUser(data.user);
+      showToast(isRegister ? 'Account created successfully! Welcome to FloraCraft.' : 'Logged in successfully', 'success');
+      navigate(from, { replace: true });
+    } catch (err) {
+      showToast(err.message || 'Google authentication failed', 'error');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  useEffect(() => {
+    const loadGoogleScript = () => {
+      if (window.google) {
+        initializeGoogleSignIn();
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = "https://accounts.google.com/gsi/client";
+      script.async = true;
+      script.defer = true;
+      script.onload = initializeGoogleSignIn;
+      document.head.appendChild(script);
+    };
+
+    const initializeGoogleSignIn = () => {
+      if (!window.google) return;
+      window.google.accounts.id.initialize({
+        client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID || '',
+        callback: handleGoogleLoginResponse,
+      });
+
+      const btnElem = document.getElementById("google-signin-btn");
+      if (btnElem) {
+        window.google.accounts.id.renderButton(btnElem, {
+          theme: "outline",
+          size: "large",
+          width: 350,
+          text: isRegister ? "signup_with" : "signin_with"
+        });
+      }
+    };
+
+    loadGoogleScript();
+  }, [isRegister]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -146,6 +196,16 @@ export default function Login() {
             {busy ? 'Processing...' : isRegister ? 'Register' : 'Login'}
           </button>
         </form>
+
+        <div className="divider" style={{ margin: '1.5rem 0', display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+          <span style={{ flex: 1, height: '1px', backgroundColor: 'var(--border, #e0e0e0)' }}></span>
+          <span style={{ padding: '0 10px', fontSize: '0.85rem', color: 'var(--text-muted, #757575)' }}>OR</span>
+          <span style={{ flex: 1, height: '1px', backgroundColor: 'var(--border, #e0e0e0)' }}></span>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: '1rem' }}>
+          <div id="google-signin-btn"></div>
+        </div>
 
         <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
           {isRegister ? 'Already have an account? ' : "Don't have an account? "}

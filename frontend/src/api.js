@@ -92,6 +92,17 @@ export async function registerUser(name, email, password, confirmPassword, phone
   return data;
 }
 
+export async function loginWithGoogle(token) {
+  const data = await request(`${API_BASE}/api/auth/google`, {
+    method: 'POST',
+    body: JSON.stringify({ token })
+  }, 'user');
+  
+  localStorage.setItem('userToken', data.token);
+  localStorage.setItem('currentUser', JSON.stringify(data.user));
+  return data;
+}
+
 export async function verifyUserToken(token) {
   return request(`${API_BASE}/api/auth/verify`, { method: 'GET' }, 'user');
 }
