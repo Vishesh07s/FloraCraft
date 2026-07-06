@@ -1,4 +1,4 @@
-# 🌿 FloraCraft (aka LeafLoft)
+# 🌿 FloraCraft
 
 [![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
@@ -39,7 +39,7 @@
 ## 🛠️ Architecture & Tech Stack
 
 ```
-leafLoft/
+FloraCraft/
 ├── backend/            # Express, Node, and Mongoose controllers
 └── frontend/           # React, Vite, and Vanilla CSS components
 ```
@@ -58,8 +58,8 @@ leafLoft/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/leafloft.git
-cd leafloft
+git clone https://github.com/your-username/FloraCraft.git
+cd FloraCraft
 ```
 
 ### 2. Setup Backend Server

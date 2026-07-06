@@ -51,7 +51,7 @@ FloraCraft is designed using a **decoupled Client-Server Architecture** utilizin
 ## Folder Structure
 
 ```
-leafLoft/
+FloraCraft/
 ├── backend/
 │   ├── src/
 │   │   ├── config/       # Houses startup configurations (e.g. env checks)

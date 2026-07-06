@@ -6,7 +6,7 @@ This living document contains the complete structural blueprints, schema details
 
 ## Project Overview
 
-*   **Project Name:** FloraCraft (aka LeafLoft)
+*   **Project Name:** FloraCraft
 *   **Purpose:** A premium, production-ready MERN-stack e-commerce catalog and ordering platform specialized in air-purifying, indoor, and outdoor house plants.
 *   **Current Version:** 2.0.0
 *   **Tech Stack:**
@@ -17,7 +17,7 @@ This living document contains the complete structural blueprints, schema details
 ### Folder Structure
 
 ```
-leafLoft/
+FloraCraft/
 ├── backend/
 │   ├── src/
 │   │   ├── config/             # Environment & service configurations
